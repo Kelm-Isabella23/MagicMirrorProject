@@ -1,0 +1,4 @@
+WEATHER_API_KEY = "DEIN_API_KEY"
+CITY = "Stuttgart"
+COUNTRY_CODE = "DE"
+DHT_PIN = 4

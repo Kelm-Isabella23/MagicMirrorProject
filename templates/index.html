@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Mirror</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta http-equiv="refresh" content="60">
+</head>
+<body>
+    <div class="mirror-container">
+        
+        <div class="top-left box">
+            <h2>Uhrzeit</h2>
+            <p class="time">{{ time_data.time }}</p>
+            <p>{{ time_data.weekday }}</p>
+            <p>{{ time_data.date }}</p>
+        </div>
+
+        <div class="top-right box">
+            <h2>Wetter</h2>
+            <p class="temp">{{ weather_data.temperature }}°C</p>
+            <p>{{ weather_data.description }}</p>
+            <p>{{ weather_data.location }}</p>
+        </div>
+
+        <div class="bottom-left box">
+            <h2>Innenraum</h2>
+            <p>Temperatur: {{ sensor_data.temperature_indoor }}°C</p>
+            <p>Luftfeuchtigkeit: {{ sensor_data.humidity }}%</p>
+        </div>
+
+        <div class="bottom-right box">
+            <h2>Willkommen</h2>
+            <p>Hallo Lumi ✨</p>
+            <p>Ich wünsche dir einen schönen Tag.</p>
+        </div>
+
+    </div>
+</body>
+</html>
